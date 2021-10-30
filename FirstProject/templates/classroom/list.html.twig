@@ -1,0 +1,18 @@
+
+<h1> liste Classroom
+<a href="{{path('add')}}" > ajouter </a>   </h1>
+<table border=5>
+{%for c in class %}
+<tr>
+<td> {{c.id}} </td>
+<td> {{c.name}}  </td>
+<td> <a href="{{path('update',{'id':c.id})}}" > edit</a>
+<td> <a href="{{path('join',{'id':c.id})}}" > listJoin</a>
+<a href="{{path('delete',{'id':c.id})}}" > delete</a>
+<a href="{{path('moy',{'id':c.id})}}" > moyenne</a>
+<a href="{{path('redoublant',{'id':c.id})}}" > nombre redoublants</a>  </td> 
+
+
+</tr>
+{% endfor %}
+</table>

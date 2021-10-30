@@ -1,0 +1,7 @@
+#index:
+  #  path: /
+  # controller: App\Controller\DefaultController::index
+
+index1:
+    path: /slt
+    controller: App\Controller\StudentController::index1

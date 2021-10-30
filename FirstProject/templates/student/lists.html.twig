@@ -1,0 +1,35 @@
+<h1> List student</h1>
+
+<a href="{{path('tri')}}" > tri par email asc </a>
+<p> </p>
+<a href="{{path('triD')}}" > tri par email desc </a>
+<p> </p>
+<table border=5>
+<tr>
+<td> nsc </td>
+<td> email  </td>
+<td> classe  </td>
+<td> date  </td>
+<td>moyenne  </td>
+<td>action  </td>
+
+</tr>
+{%for c in stud %}
+<tr>
+<td> {{c.nsc}} </td>
+<td> {{c.email}}  </td>
+<td> {{c.classroom.name}}  </td>
+<td> {{c.date}}  </td>
+<td> {{c.moyenne}}  </td>
+<td> <a href="{{path('updates',{'nsc':c.nsc})}}" > edit</a>
+<a href="{{path('deletes',{'nsc':c.nsc})}}" > delete</a> </td>
+</tr>
+{% endfor %}
+</table>
+<a href="{{path('adds')}}" > add student </a>
+<p> </p>
+<a href="{{path('date')}}" > last 3 students </a>
+<p></p>
+<a href="{{path('enabled')}}" > Enabled Students </a>
+<p></p>
+<a href="{{path('datec')}}" > datec </a>
